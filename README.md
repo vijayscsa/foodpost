@@ -1,4 +1,4 @@
-# ShareAndCare
+# FoodPost
 
 Help to share the excess food among needy people
 
