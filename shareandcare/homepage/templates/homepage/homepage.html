@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}ShareAndCare - Home{% endblock %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'homepage:home' username %}">ShareAndCare</a>
+    </div>
+    <span class="d-block d-lg-inline-block">
+      <div class="HeaderNavlink px-0 py-2 m-0">
+        <a class="text-bold text-white no-underline" href="{% url 'account:logout' %}"><button
+            class="btn btn-outline-primary">Logout</button></a>
+      </div>
+    </span>
+  </div>
+</nav>
+<div class="container">
+  <a href=""><button class="btn btn-primary my-2 my-sm-0">New Post</button></a>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="{% url 'homepage:home' username %}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="{% url 'foodpost:mypost' %}">My Posts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="{% url 'account:profile' %}">Profile</a>
+    </li>
+  </ul>
+</div>
+{% endblock %}
